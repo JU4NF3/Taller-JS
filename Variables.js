@@ -35,7 +35,5 @@ else if (edad >= 25 && edad <= 60) {
     // Se calculan las obligaciones
 }
 
-else if (edad >= 60) {
-    // Es pensionado
-}
+edad > 60 ? pension : false;
 
