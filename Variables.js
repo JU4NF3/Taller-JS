@@ -22,3 +22,20 @@ const riesgo2 = 1.044;
 const riesgo3 = 2.436;
 const riesgo4 = 4.350;
 const riesgo5 = 6.960;
+
+if (edad <18) {
+    // No se puede calcular porque es menor de edad
+}
+
+else if (edad >= 18 && edad <= 25) {
+    // No se calcula porque es beneficiario
+}
+
+else if (edad >= 25 && edad <= 60) {
+    // Se calculan las obligaciones
+}
+
+else if (edad >= 60) {
+    // Es pensionado
+}
+
