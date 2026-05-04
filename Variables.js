@@ -1,4 +1,5 @@
-let nombreCompleto = "";
+// Juan Felipe Montañez Vanegas 1033101085
+
 let edad = 0;
 let tipoDocumento = "";
 let numeroDocumento = "";
@@ -10,16 +11,18 @@ let nivelRiesgo = "";
 
 // Prompts
 
-const mensajeNombreCompleto = "Ingrese su nombre completo";
-const mensajeEdad = "Ingrese su edad";
-const mensajeTipoDeDocumento = "Ingrese su Tipo de documento";
-const mensajeNumeroDeDocumento = "Ingrese su numero de documento";
-const mensajeSalario = "Ingrese su Salario";
-const mensajeComisiones = "Ingrese sus comisiones";
-const mensajeTotalHorasExtra = "Ingrese el total de horas extra";
-const mensajeNivelDeRiesgo = "Ingrese su nivel de riesgo";
+nombreCompleto = ("Ingrese su nombre completo");
+validarUsuario(edad);
+edad = parseInt ( ("Ingrese su edad"));
+tipoDocumento = ("Ingrese su Tipo de documento");
+numeroDocumento = parseInt ( ("Ingrese su numero de documento"));
+salario = parseInt ( ("Ingrese su Salario"));
+comisiones = parseInt ( ("Ingrese sus comisiones"));
+totalHorasExtra = parseInt ( ("Ingrese el total de horas extra"));
+nivelRiesgo = ("Ingrese su nivel de riesgo");
 
 // Variables Para calculos
+
 const salarioMin = 1750905;
 const salarioMinIntegralVigente = 22761765;
 const subsidioTransporte = 249095;
@@ -37,6 +40,7 @@ const riesgo4 = 4.350;
 const riesgo5 = 6.960;
 
 // Niveles de Riesgos Array
+
 const riesgos = [
     {nombre: "riesgo1", valor: 0.522},
     {nombre: "riesgo2", valor: 1.044},
@@ -54,8 +58,10 @@ let calculoIbc = ingresobasecotizacion * (salario + comisiones + totalHorasExtra
 let calculoSalud = calculoIbc * porcentajeSalud;
 let calculoPension = calculoIbc * porcentajePension;
 
+function validarUsuario (edadUsuario) {
+console.log("Dentro de la funcion de validar usuario")
 if (edad <18) {
-    // No se puede calcular porque es menor de edad
+    ("No se puede calcular porque es menor de edad");
 }
 
 else if (edad >= 18 && edad <= 25) {
@@ -67,6 +73,4 @@ else if (edad >= 25 && edad <= 60) {
 }
 
 edad > 60 ? pension : false;
-
-
-
+}
