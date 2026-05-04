@@ -1,25 +1,17 @@
 // Juan Felipe Montañez Vanegas 1033101085
 
-let edad = 0;
-let tipoDocumento = "";
-let numeroDocumento = "";
+let edad = getelementbyId("edad").value;
+let tipoDocumento = getelementbyId("tipoDocumento").value;
+let numeroDocumento = getelementbyId("numeroDocumento").value;
 
-let salario = 0;
-let comisiones = 0;
-let totalHorasExtra = 0;
-let nivelRiesgo = "";
+let salario = getelementbyId("salario").value;
+let comisiones = getelementbyId("comisiones").value;
+let totalHorasExtra = getelementbyId("totalHorasExtra").value;
+let nivelRiesgo = getelementbyId("nivelRiesgo").value;
 
 // Prompts
 
-nombreCompleto = ("Ingrese su nombre completo");
 validarUsuario(edad);
-edad = parseInt ( ("Ingrese su edad"));
-tipoDocumento = ("Ingrese su Tipo de documento");
-numeroDocumento = parseInt ( ("Ingrese su numero de documento"));
-salario = parseInt ( ("Ingrese su Salario"));
-comisiones = parseInt ( ("Ingrese sus comisiones"));
-totalHorasExtra = parseInt ( ("Ingrese el total de horas extra"));
-nivelRiesgo = ("Ingrese su nivel de riesgo");
 
 // Variables Para calculos
 
