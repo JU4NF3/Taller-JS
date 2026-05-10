@@ -29,18 +29,18 @@
           <label for="nombreCompleto">Nombre completo</label>
           <div class="input-icon">
             <i class="ti ti-user"></i>
-            <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Juan Pérez" required>
+            <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Juan Pérez" required minlength="5" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
           </div>
         </div>
  
         <div class="two-col">
           <div class="form-field">
             <label for="edad">Edad</label>
-            <input type="number" id="edad" name="edad" placeholder="25" required>
+            <input type="number" id="edad" name="edad" placeholder="25" required min="18" max="100">
           </div>
           <div class="form-field">
             <label for="tipoDocumento">Tipo documento</label>
-            <input type="text" id="tipoDocumento" name="tipoDocumento" placeholder="CC" required>
+            <input type="text" id="tipoDocumento" name="tipoDocumento" placeholder="CC" required minlength="2" maxlength="3" pattern="[A-Za-z]+">
           </div>
         </div>
  
@@ -48,25 +48,25 @@
           <label for="numeroDocumento">Número de documento</label>
           <div class="input-icon">
             <i class="ti ti-id"></i>
-            <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="1234567890" required>
+            <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="1234567890" required minlength="7" maxlength="10" pattern="[0-9]+">
           </div>
         </div>
  
         <div class="two-col">
           <div class="form-field">
             <label for="salario">Salario (COP)</label>
-            <input type="number" id="salario" name="salario" placeholder="2.500.000" required>
+            <input type="number" id="salario" name="salario" placeholder="2.500.000" required min="0" max="50000000">
           </div>
           <div class="form-field">
             <label for="comisiones">Comisiones</label>
-            <input type="number" id="comisiones" name="comisiones" placeholder="0" required>
+            <input type="number" id="comisiones" name="comisiones" placeholder="0" required min="0" max="30000000">
           </div>
         </div>
  
         <div class="two-col">
           <div class="form-field">
             <label for="totalHorasExtra">Horas extra</label>
-            <input type="number" id="totalHorasExtra" name="totalHorasExtra" placeholder="0" required>
+            <input type="number" id="totalHorasExtra" name="totalHorasExtra" placeholder="0" required min="0" max="80">
           </div>
           <div class="form-field">
             <label for="nivelRiesgo">Nivel de riesgo ARL</label>
