@@ -11,46 +11,104 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="Variables.js"></script>
-    
-    <section>
-        <div>
-     <h1>Información</h1>
-    <form action="/procesar_formulario.php" method="post">
-        
-        <label for="nombreCompleto">Nombre Completo:</label>
-        <input type="text" id="nombreCompleto" name="nombreCompleto" required minlength="5" maxlength="50"  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
+ 
+  <div class="container">
+ 
 
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" required min="18" max="100" pattern="[0-9]+">
+    <div class="form-area">
+ 
+      <div class="header">
+        <span class="site-title">Calcula Tu Nómina</span>
+      </div>
 
-        <label for="tipoDocumento">Tipo de documento:</label>
-        <input type="text" id="tipoDocumento" name="tipoDocumento" required minlength="2" maxlength="3" pattern="[A-Za-z]+">
-
-        <label for="numeroDocumento">Numero de documento:</label>
-        <input type="text" id="numeroDocumento" name="numeroDocumento" required min="7" max="10" pattern="[0-9]+">
-
-        <label for="salario">Salario:</label>
-        <input type="number" id="salario" name="salario" required min="0" max="50000000" pattern="[0-9]+">
-
-        <label for="comisiones">Comisiones:</label>
-        <input type="number" id="comisiones" name="comisiones" required min="0" max="30000000" pattern="[0-9]+">
-
-        <label for="horas_extra">Horas Extra:</label>
-        <input type="number" id="totalHorasExtra" name="totalHorasExtra" required min="0" max="80" pattern="[0-9]+">
-
-        <label for="nivelRiesgo">Nivel de Riesgo:</label>
-        <select id="nivelRiesgo" name="nivelRiesgo" required>
-            <option value="">Seleccione una opción</option>
-            <option value="muyBajo">0.522</option>
-            <option value="bajo">1.044</option>
-            <option value="medio">2.436</option>
-            <option value="alto">4.350</option>
-            <option value="muyAlto">6.960</option>
-        </select><br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
+ 
+      <form class="payroll-form" action="/procesar_formulario.php" method="post">
+        <script src="Variables.js"></script>
+ 
+        <div class="form-field compact-field">
+          <label for="nombreCompleto">Nombre completo</label>
+          <div class="input-icon">
+            <i class="ti ti-user"></i>
+            <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Juan Pérez" required>
+          </div>
+        </div>
+ 
+        <div class="two-col">
+          <div class="form-field">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" placeholder="25" required>
+          </div>
+          <div class="form-field">
+            <label for="tipoDocumento">Tipo documento</label>
+            <input type="text" id="tipoDocumento" name="tipoDocumento" placeholder="CC" required>
+          </div>
+        </div>
+ 
+        <div class="form-field compact-field">
+          <label for="numeroDocumento">Número de documento</label>
+          <div class="input-icon">
+            <i class="ti ti-id"></i>
+            <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="1234567890" required>
+          </div>
+        </div>
+ 
+        <div class="two-col">
+          <div class="form-field">
+            <label for="salario">Salario (COP)</label>
+            <input type="number" id="salario" name="salario" placeholder="2.500.000" required>
+          </div>
+          <div class="form-field">
+            <label for="comisiones">Comisiones</label>
+            <input type="number" id="comisiones" name="comisiones" placeholder="0" required>
+          </div>
+        </div>
+ 
+        <div class="two-col">
+          <div class="form-field">
+            <label for="totalHorasExtra">Horas extra</label>
+            <input type="number" id="totalHorasExtra" name="totalHorasExtra" placeholder="0" required>
+          </div>
+          <div class="form-field">
+            <label for="nivelRiesgo">Nivel de riesgo ARL</label>
+            <select id="nivelRiesgo" name="nivelRiesgo" required>
+              <option value="" disabled selected>Seleccione</option>
+              <option value="muyBajo">I — 0.522%</option>
+              <option value="bajo">II — 1.044%</option>
+              <option value="medio">III — 2.436%</option>
+              <option value="alto">IV — 4.350%</option>
+              <option value="muyAlto">V — 6.960%</option>
+            </select>
+          </div>
+        </div>
+ 
+        <button class="submit-btn" type="submit">Calcular nómina</button>
+ 
+        <div class="options-row">
+          <label><input type="checkbox"> Recordar datos</label>
+          <a href="#">¿Olvidaste algo?</a>
+        </div>
+ 
+      </form>
+ 
+      <div class="dots">
+        <div class="dot on"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+ 
+    </div>
+ 
+    <div class="hero">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+ 
+      <div class="hero-text">
+        <h2>Bienvenido.</h2>
+        <p>Calcula tu nómina de forma rápida y precisa.</p>
+        <a href="#" class="cta">Explorar reportes <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+ 
   </div>
  
 </body>
