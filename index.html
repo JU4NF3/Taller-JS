@@ -11,15 +11,18 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
- 
-  <div class="container">
- 
+    <script src="Variables.js"></script>
+    
+    <section>
+        <div>
+     <h1>Información</h1>
+    <form action="/procesar_formulario.php" method="post">
+        
+        <label for="nombreCompleto">Nombre Completo:</label>
+        <input type="text" id="nombreCompleto" name="nombreCompleto" required minlength="5" maxlength="50"  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
 
-    <div class="form-area">
- 
-      <div class="header">
-        <span class="site-title">Calcula Tu Nómina</span>
-      </div>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required min="18" max="100" pattern="[0-9]+">
 
  
       <form class="payroll-form" action="/procesar_formulario.php" method="post">
