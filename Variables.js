@@ -1,13 +1,13 @@
 // Juan Felipe Montañez Vanegas 1033101085
 
-let edad = getelementbyId("edad").value;
-let tipoDocumento = getelementbyId("tipoDocumento").value;
-let numeroDocumento = getelementbyId("numeroDocumento").value;
+let edad = document.getElementById("edad").value;
+let tipoDocumento = document.getElementById("tipoDocumento").value;
+let numeroDocumento = document.getElementById("numeroDocumento").value;
 
-let salario = getelementbyId("salario").value;
-let comisiones = getelementbyId("comisiones").value;
-let totalHorasExtra = getelementbyId("totalHorasExtra").value;
-let nivelRiesgo = getelementbyId("nivelRiesgo").value;
+let salario = document.getElementById("salario").value;
+let comisiones = document.getElementById("comisiones").value;
+let totalHorasExtra = document.getElementById("totalHorasExtra").value;
+let nivelRiesgo = document.getElementById("nivelRiesgo").value;
 
 // Prompts
 
@@ -40,6 +40,22 @@ const riesgos = [
     {nombre: "riesgo4", valor: 4.350},
     {nombre: "riesgo5", valor: 6.960},
 ];
+
+let fechadedeNacimiento = document.getElementById("fechadedeNacimiento");
+let edad = document.getElementById("edad");
+
+   function calcularEdad (fechadedeNacimiento) {
+
+    let fechaActual = new Date();
+    let fechaNacimiento = new Date(fechadedeNacimiento);
+    let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    let mes = fechaActual.getMonth() - fechaNacimiento.getMonth();
+
+    if (mes < 0 || (mes === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
+        edad--;
+    }
+    return edad;
+   }
 
 function calcularporcentaje (base, porcentaje){
    let resultado = base * porcentaje
